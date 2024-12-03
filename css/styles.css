@@ -376,10 +376,11 @@ ul.menuLinks li a {
   color: black;
   display: block;
   text-decoration: none;
+  font-weight: 300;
 }
 ul.menuLinks li.active a {
   background-color: white;
-  color: #ff0026;
+  color: rgb(15, 31, 118);
   font-weight: 500;
 }
 
@@ -561,7 +562,7 @@ footer a {
     border-bottom: 1px solid #ccc;
   }
   ul.menuLinks li.active a {
-    color: red;
+    color: rgb(15, 31, 118);
   }
   ul.open.menuLinks {
     display: grid;
