@@ -1,0 +1,84 @@
+/* NAVIGATION STUFF GOES HERE  */
+#headerWrapper {
+    header{padding: 2rem $gutter;}
+    h1{font-size: 2rem;}
+}
+
+.allCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gutter;
+    section {
+        flex-basis: calc(50% - ($gutter/2));
+    }
+}
+
+ul.menuLinks {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    width: 30%;
+    li a {
+        color: black;
+        padding: .75rem $gutter;
+        align-items: right;
+        text-decoration: none;
+        text-align: right;
+        border-bottom: 1px solid $greyColor;
+    }
+    li.active a {
+        color: red;
+    }
+}
+
+ul.open.menuLinks {
+    display: grid;
+    width: 25%;
+}
+
+.clientLogos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.item {
+    img{
+        max-width: 100%;
+    }
+    flex: 0 1 calc(25% - 1rem); /* Each item takes 25% of the width, minus the gap */
+    text-align: center; /* Center text inside items */
+    margin: 0; /* Reset margin */
+}
+
+
+footer div {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.hero {
+    div {
+        top: 20px;
+        left: 20px;
+        right: 450px;
+        bottom: 20px;
+        p{font-size: .75rem;}
+    }
+}
+
+.addresses{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    p{
+        font-size: 5vw;
+    }
+    address {
+        font-size: 3vw;
+        align-items: left;
+    }
+}

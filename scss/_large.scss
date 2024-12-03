@@ -1,0 +1,73 @@
+header, nav, main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* NAVIGATION STUFF GOES HERE  */
+#myButton {
+    display: none;
+}
+ul.menuLinks li a {
+    padding: .4rem 1rem;
+}
+ul.menuLinks, ul.menuLinks.open {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.allCards {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping if needed */
+    justify-content: space-between; /* Ensures even spacing */
+    gap: $gutter; /* Removes gaps between items */
+    padding: 0; /* Optional: ensure no extra padding */
+    margin: 0; /* Optional: ensure no margin */
+}
+
+.allCards section {
+    flex: 1 0 calc(22%); /* Each section gets 25% width (1/4th of 100%) */
+    box-sizing: border-box; /* Ensure padding/margin doesn't affect width */
+}
+
+footer div {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.hero {
+    div {
+        align-items: center;
+        top: 350px;
+        left: 20px;
+        right: 2vw;
+        bottom: 20px;
+        p{font-size: 1.5rem;}
+    }
+}
+
+.clientLogos {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(6, 1fr); /* 6 equal columns for large screens */
+    gap: 1rem; /* Space between items */
+    width: 80%; /* Adjust container width */
+    max-width: 1200px; /* Limit maximum width */
+    margin: 0 auto; /* Center container horizontally */
+    padding: 10px;
+}
+.item {
+    width: 100%;
+}
+
+.addresses{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    p{
+        text-align: center;
+        font-size: 3vw;
+    }
+    address {
+        font-size: 2vw;
+        text-align: center;
+    }
+}

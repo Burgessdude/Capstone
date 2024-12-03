@@ -1,0 +1,237 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    min-width: 320px;
+}
+
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {border-bottom: 1px solid $greyColor;}
+header {
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+    span {
+        font-size: 1.6rem;
+        font-weight: $lightWeight;
+        color: $primaryColor;
+        padding-right: 10px;
+    }
+} // end header
+
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+
+// css example
+#myButton::before {
+    content: "\2630";
+}
+
+#myButton {
+    position: fixed;
+    right: 0;
+    top: 0;
+    align-items: right;
+    border: none;
+    background: none;
+    color: black;
+    font-size: 2rem;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    font-weight: $lightWeight;
+    cursor: pointer;
+}
+ul.menuLinks {
+    position: absolute;
+    right: $gutter;
+    width: 200px;
+    background-color: #fff;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+
+    display: none;
+    li a {
+        color: black;
+        display: block;
+        text-decoration: none;
+    }
+
+    li.active a {
+        background-color: white;
+        color: $primaryColor;
+        font-weight: $normalWeight;
+    }
+    z-index: 99;
+}
+
+ul.open.menuLinks {
+    display: block;
+    width: 100%;
+}
+#myButton.open::before {
+    content: "x";
+}
+
+
+
+
+
+
+
+
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    h1 {
+        font-size: 3rem;
+        color: black;
+        font-weight: $lightWeight;
+        text-align: center;
+        margin: 0;
+    }
+    h2 {
+        padding: 1rem $gutter .25rem $gutter;
+    }
+    h4 {
+        font-size: 2rem;
+        color: black;
+        font-weight: $normalWeight;
+        text-align: center;
+        margin: 0;
+    }
+    h3 {
+        margin: 0;
+        font-size: 1rem;
+        color: $secondaryColor;
+        font-weight: $lightWeight;
+        text-align: center;
+    }
+    p {
+        padding: .5rem $gutter;
+        color: #333;
+        line-height: $leading;
+    }
+}// end main
+
+.allCards {
+    padding: 0 $gutter;
+    display: grid;
+    section {
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.279);
+        img {
+            width: 100%;
+            height: auto;
+        }
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 1rem 0;
+        background-color: rgb(240, 238, 238);
+        h2, p, img{
+            margin: 0;
+        }
+        h2 {
+            background-color: $primaryColor;
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        p {
+            font-style: italic;
+        }
+    }
+} // end allCards
+
+.clientLogos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+.item {
+    width: 75%;
+}
+.hero {
+    position: relative;
+    div {
+        position: absolute;
+        align-items: center;
+        top: 20px;
+        left: 175px;
+        right: 20px;
+        bottom: 20px;
+        color: white;
+        p{
+            font-size: .6rem;
+            font-weight: $normalWeight;
+            margin: 0;
+        }
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.807) 0%, rgba(255, 255, 255, 0.675) 40%);
+    }
+    video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+    background-color: black;
+} // end footer wrapper
+
+footer {
+    h4 {
+        font-size: 3rem;
+        color: white;
+        padding: 10px;
+        margin: 0;
+    }
+    font-size: .85rem;
+    color: white;
+    text-align: center;
+    a {color: white;}
+    .contact {
+        p{font-size: 1.2rem;}
+        ion-icon{color: #2b7678; padding-right: 5px;}
+    } // end of contact
+
+    .location {
+        font-size: 1.2rem;
+    } // end of location
+
+    p.legal {
+        padding: 20px;
+        font-weight: $lightWeight;
+        text-align: center;
+        font-size: 1rem;
+    }
+    a{
+        font-size: 2rem;
+        padding: 10px;
+    }
+}// end footer
+
