@@ -74,11 +74,12 @@ ul.menuLinks {
         color: black;
         display: block;
         text-decoration: none;
+        font-weight: $lightWeight;
     }
 
     li.active a {
         background-color: white;
-        color: rgb(110, 24, 24);
+        color: rgb(15, 31, 118);
         font-weight: $normalWeight;
     }
     z-index: 99;
